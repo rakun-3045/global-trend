@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Winter Jacket | Global Trend</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Global Trend</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+                <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page container">
+        <div class="breadcrumbs">
+            <a href="#">Home</a> / <a href="#">Men's Outerwear</a> / <span>Luxury Winter Jacket</span>
+        </div>
+
+        <div class="product-container">        <!-- Product Gallery Section -->
+            <section class="product-gallery">
+                <div class="main-image">
+                    <img id="main-product-image" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Gray">
+                    <div class="image-zoom-lens" id="image-zoom-lens"></div>
+                    <div class="zoomed-image" id="zoomed-image"></div>
+                </div>
+                <div class="thumbnails-container">
+                    <div class="thumbnails-scroll">
+                        <img class="thumbnail active" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Gray" data-color="gray">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Side View" data-color="gray">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Back View" data-color="gray">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Detail" data-color="gray">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1577660002965-8c07a5cd057e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Blue" data-color="blue">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1605908502724-9093a79a1b39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Black" data-color="black">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1580657018950-c7f7d6a6d990?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" alt="Luxury Winter Jacket - Brown" data-color="brown">
+                    </div>
+                    <button class="scroll-btn prev-btn"><i class="fas fa-chevron-up"></i></button>
+                    <button class="scroll-btn next-btn"><i class="fas fa-chevron-down"></i></button>
+                </div>
+            </section>
+
+            <!-- Product Details Section -->
+            <section class="product-details">
+                <div class="product-info">
+                    <h1>Luxury Winter Jacket</h1>
+                    <div class="product-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="review-count">42 reviews</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="original-price">$199.99</span>
+                        <span class="current-price">$149.99</span>
+                        <span class="save-badge">Save 25%</span>
+                    </div>
+                    <div class="product-short-desc">
+                        <p>Premium winter jacket with water-resistant exterior, thermal insulation, and premium detailing. Perfect for cold winter days while maintaining a stylish look.</p>
+                    </div>
+
+                    <!-- Color Variants Section -->
+                    <div class="product-variants">
+                        <div class="variant-section">
+                            <div class="variant-label">
+                                <span>Color: </span>
+                                <span id="selected-color">Gray</span>
+                                <button id="compare-colors-btn" class="text-btn">Compare Colors</button>
+                            </div>
+                            <div class="color-options">
+                                <button class="color-swatch active" data-color="gray" style="background-color: #808080;"></button>
+                                <button class="color-swatch" data-color="blue" style="background-color: #0000FF;"></button>
+                                <button class="color-swatch" data-color="black" style="background-color: #000000;"></button>
+                                <button class="color-swatch" data-color="brown" style="background-color: #8B4513;"></button>
+                            </div>
+                        </div>
+
+                        <!-- Size Variants Section -->
+                        <div class="variant-section">
+                            <div class="variant-label">
+                                <span>Size: </span>
+                                <span id="selected-size">M</span>
+                                <button id="size-chart-btn" class="text-btn">Size Chart</button>
+                            </div>
+                            <div class="size-options">
+                                <button class="size-btn" data-size="XS">XS</button>
+                                <button class="size-btn" data-size="S">S</button>
+                                <button class="size-btn active" data-size="M">M</button>
+                                <button class="size-btn" data-size="L">L</button>
+                                <button class="size-btn" data-size="XL">XL</button>
+                                <button class="size-btn" data-size="XXL">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Section -->
+                    <div class="add-to-cart-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus-btn">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="qty-btn plus-btn">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+
+                    <!-- Product Meta Information -->
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $75</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day easy returns</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-year warranty included</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Product Information Tabs -->
+        <section class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="product-info">Product Information</button>
+                <button class="tab-btn" data-tab="shipping">Shipping Details</button>
+            </div>
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    <h3>Product Description</h3>
+                    <p>Our Luxury Winter Jacket is designed for the modern adventurer who doesn't compromise on style or function. Crafted from premium materials, this jacket combines cutting-edge insulation technology with urban aesthetics.</p>
+                    <p>The exterior shell is treated with our proprietary water-resistant coating, while the interior features a premium thermal lining that traps body heat without adding bulk. Strategic venting ensures you won't overheat during activities.</p>
+                    <p>Design details include reinforced stitching at stress points, premium YKK zippers, and adjustable cuffs and hem to customize your fit and keep the cold out. The detachable hood features faux-fur trim that can be removed according to your preference.</p>
+                    <p>Whether you're commuting to work or hitting the trails on the weekend, this versatile jacket delivers exceptional performance in cold weather conditions while maintaining a sleek, sophisticated look.</p>
+                </div>
+                <div class="tab-panel" id="product-info">
+                    <h3>Product Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4>Materials</h4>
+                            <ul>
+                                <li>Shell: 85% Polyester, 15% Nylon</li>
+                                <li>Lining: 100% Recycled Polyester</li>
+                                <li>Insulation: Proprietary ThermaCore™ Technology</li>
+                                <li>Hood Trim: Removable Faux Fur</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Waterproof Rating: 10,000mm</li>
+                                <li>Breathability Rating: 8,000g/m²/24hrs</li>
+                                <li>6 Pockets (4 exterior, 2 interior)</li>
+                                <li>Adjustable and Removable Hood</li>
+                                <li>Sealed Seams</li>
+                                <li>Two-Way Front Zipper</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h4>Care Instructions</h4>
+                            <ul>
+                                <li>Machine wash cold, gentle cycle</li>
+                                <li>Use mild detergent</li>
+                                <li>Do not use bleach or fabric softeners</li>
+                                <li>Tumble dry low</li>
+                                <li>Do not iron</li>
+                                <li>Do not dry clean</li>
+                            </ul>
+                        </div>
+                        <div class="info-item">
+                            <h4>Sustainability</h4>
+                            <ul>
+                                <li>Bluesign® Approved Materials</li>
+                                <li>PFC-Free DWR Treatment</li>
+                                <li>Recycled Insulation Materials</li>
+                                <li>Fair Trade Certified™ Factory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="shipping">
+                    <h3>Shipping Details</h3>
+                    <div class="shipping-info">
+                        <div class="shipping-section">
+                            <h4>Delivery Options</h4>
+                            <table class="shipping-table">
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Delivery Time</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Standard Shipping</td>
+                                        <td>3-5 business days</td>
+                                        <td>$5.99 (Free over $75)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Express Shipping</td>
+                                        <td>2 business days</td>
+                                        <td>$12.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Overnight Shipping</td>
+                                        <td>Next business day</td>
+                                        <td>$24.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>International Shipping</td>
+                                        <td>7-14 business days</td>
+                                        <td>Starting at $19.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="shipping-section">
+                            <h4>Returns & Exchanges</h4>
+                            <p>We offer a hassle-free 30-day return policy. If you're not completely satisfied with your purchase, you may return it within 30 days of delivery for a full refund of the merchandise value.</p>
+                            <p>To be eligible for a return, your item must be in the same condition that you received it, unworn or unused, with tags, and in its original packaging.</p>
+                            <p>Exchanges can be processed by contacting our customer service team. Return shipping is free for exchanges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Bundle Suggestion -->
+        <section class="product-bundle">
+            <h2 class="section-title">Complete the Look</h2>
+            <div class="bundle-container">                <div class="bundle-items">
+                    <div class="bundle-item">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Luxury Winter Jacket">
+                        <div class="bundle-item-info">
+                            <h3>Luxury Winter Jacket</h3>
+                            <p class="bundle-price">$149.99</p>
+                        </div>
+                    </div>
+                    <div class="bundle-item-plus">+</div>
+                    <div class="bundle-item">
+                        <img src="https://images.unsplash.com/photo-1521223443955-199623c516ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Premium Winter Gloves">
+                        <div class="bundle-item-info">
+                            <h3>Premium Winter Gloves</h3>
+                            <p class="bundle-price">$39.99</p>
+                        </div>
+                    </div>
+                    <div class="bundle-item-plus">+</div>
+                    <div class="bundle-item">
+                        <img src="https://images.unsplash.com/photo-1618354691551-44de113f0164?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Matching Winter Beanie">
+                        <div class="bundle-item-info">
+                            <h3>Matching Winter Beanie</h3>
+                            <p class="bundle-price">$29.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bundle-summary">
+                    <div class="bundle-pricing">
+                        <div class="bundle-total">
+                            <span>Bundle Price:</span>
+                            <span class="total-price">$199.99</span>
+                        </div>
+                        <div class="bundle-savings">
+                            <span>You Save:</span>
+                            <span class="savings-amount">$19.98</span>
+                        </div>
+                    </div>
+                    <button class="add-bundle-btn">Add Bundle to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pair Well With (Complementary Products) -->
+        <section class="pair-well-with">
+            <h2 class="section-title">Pair Well With</h2>
+            <div class="complementary-products">
+                <button class="scroll-btn prev-comp"><i class="fas fa-chevron-left"></i></button>                <div class="complementary-products-container">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://images.unsplash.com/photo-1542772144-515dcd2c6851?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Premium Winter Boots">
+                            <button class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="product-card-info">
+                            <h3>Premium Winter Boots</h3>
+                            <p class="product-card-price">$129.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://images.unsplash.com/photo-1586350977771-b3d0a5554705?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Thermal Wool Socks">
+                            <button class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="product-card-info">
+                            <h3>Thermal Wool Socks</h3>
+                            <p class="product-card-price">$19.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Cashmere Winter Scarf">
+                            <button class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="product-card-info">
+                            <h3>Cashmere Winter Scarf</h3>
+                            <p class="product-card-price">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Insulated Travel Flask">
+                            <button class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="product-card-info">
+                            <h3>Insulated Travel Flask</h3>
+                            <p class="product-card-price">$34.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Classic Ear Muffs">
+                            <button class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="product-card-info">
+                            <h3>Classic Ear Muffs</h3>
+                            <p class="product-card-price">$24.99</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn next-comp"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Related Products Section -->
+        <section class="related-products">
+            <h2 class="section-title">You May Also Like</h2>            <div class="related-products-grid">
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <span class="product-badge new">New</span>
+                        <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Expedition Down Parka">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Expedition Down Parka</h3>
+                        <p class="product-card-price">$249.99</p>
+                        <button class="add-to-cart-small">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <span class="product-badge sale">Sale</span>
+                        <img src="https://images.unsplash.com/photo-1609250291996-fdebe6020a8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Alpine Ski Jacket">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Alpine Ski Jacket</h3>
+                        <p class="product-card-price"><span class="original">$189.99</span> $159.99</p>
+                        <button class="add-to-cart-small">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <span class="product-badge popular">Popular</span>
+                        <img src="https://images.unsplash.com/photo-1545594861-3bef43ff2fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="Urban Puffer Jacket">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Urban Puffer Jacket</h3>
+                        <p class="product-card-price">$129.99</p>
+                        <button class="add-to-cart-small">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80" alt="All-Weather Rain Jacket">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>All-Weather Rain Jacket</h3>
+                        <p class="product-card-price">$119.99</p>
+                        <button class="add-to-cart-small">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Global Trend</h3>
+                    <p>Premium outdoor clothing for every adventure.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for new products and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Global Trend. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Size Chart Modal -->
+    <div id="size-chart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Size Chart</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="size-chart-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Chest (inches)</th>
+                            <th>Waist (inches)</th>
+                            <th>Hip (inches)</th>
+                            <th>EU Size</th>
+                            <th>UK Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>34-36</td>
+                            <td>28-30</td>
+                            <td>34-36</td>
+                            <td>44-46</td>
+                            <td>34-36</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>36-38</td>
+                            <td>30-32</td>
+                            <td>36-38</td>
+                            <td>46-48</td>
+                            <td>36-38</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>38-40</td>
+                            <td>32-34</td>
+                            <td>38-40</td>
+                            <td>48-50</td>
+                            <td>38-40</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>40-42</td>
+                            <td>34-36</td>
+                            <td>40-42</td>
+                            <td>50-52</td>
+                            <td>40-42</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>42-44</td>
+                            <td>36-38</td>
+                            <td>42-44</td>
+                            <td>52-54</td>
+                            <td>42-44</td>
+                        </tr>
+                        <tr>
+                            <td>XXL</td>
+                            <td>44-46</td>
+                            <td>38-40</td>
+                            <td>44-46</td>
+                            <td>54-56</td>
+                            <td>44-46</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="measurement-guide">
+                    <h3>How to Measure</h3>
+                    <ul>
+                        <li><strong>Chest:</strong> Measure around the fullest part of your chest, keeping the tape horizontal.</li>
+                        <li><strong>Waist:</strong> Measure around your natural waistline, keeping the tape comfortably loose.</li>
+                        <li><strong>Hip:</strong> Measure around the fullest part of your hips.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Colors Modal -->
+    <div id="compare-colors-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Compare Colors</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Select colors to compare:</p>
+                <div class="compare-colors-container">
+                    <div class="color-compare-item">
+                        <div class="color-compare-swatch" style="background-color: #808080;"></div>
+                        <div class="color-name">Gray</div>
+                        <div class="color-select">
+                            <input type="checkbox" id="compare-gray" class="compare-checkbox" checked>
+                            <label for="compare-gray">Select</label>
+                        </div>
+                    </div>
+                    <div class="color-compare-item">
+                        <div class="color-compare-swatch" style="background-color: #0000FF;"></div>
+                        <div class="color-name">Blue</div>
+                        <div class="color-select">
+                            <input type="checkbox" id="compare-blue" class="compare-checkbox">
+                            <label for="compare-blue">Select</label>
+                        </div>
+                    </div>
+                    <div class="color-compare-item">
+                        <div class="color-compare-swatch" style="background-color: #000000;"></div>
+                        <div class="color-name">Black</div>
+                        <div class="color-select">
+                            <input type="checkbox" id="compare-black" class="compare-checkbox">
+                            <label for="compare-black">Select</label>
+                        </div>
+                    </div>
+                    <div class="color-compare-item">
+                        <div class="color-compare-swatch" style="background-color: #8B4513;"></div>
+                        <div class="color-name">Brown</div>
+                        <div class="color-select">
+                            <input type="checkbox" id="compare-brown" class="compare-checkbox">
+                            <label for="compare-brown">Select</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="selected-colors-comparison">
+                    <h3>Selected Colors</h3>                <div class="selected-colors-container" id="selected-colors-display">
+                        <div class="selected-color-item">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=300&q=80" alt="Gray Luxury Winter Jacket">
+                            <div class="selected-color-name">Gray</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
